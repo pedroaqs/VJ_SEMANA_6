@@ -10,10 +10,12 @@ public class BalaControllar : MonoBehaviour
     public GameObject bala1; 
     public GameObject bala2; 
     public bool partirse = true;
+    // public GameManagerController gameManagerController;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        // gameManagerController = FindObjectOfType<GameManagerController>();
     }
 
     // Update is called once per frame
@@ -49,6 +51,7 @@ public class BalaControllar : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.tag ==  "Enemy") {
+            // gameManagerController.ganarMoneda();
             Destroy(this.gameObject);
         }
     }

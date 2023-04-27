@@ -6,8 +6,8 @@ TagManager:
   tags:
   - Ground
   - Bala
-  - Undefined
   - Enemy
+  - PBala
   layers:
   - Default
   - TransparentFX

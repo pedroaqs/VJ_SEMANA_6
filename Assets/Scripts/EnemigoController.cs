@@ -7,10 +7,13 @@ public class EnemigoController : MonoBehaviour
 
     
     Rigidbody2D rb;
+    public int golpes_restantes = 2;
+    public GameManagerController gameManagerController;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        gameManagerController = FindObjectOfType<GameManagerController>();
     }
 
     // Update is called once per frame
@@ -21,7 +24,11 @@ public class EnemigoController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.tag ==  "Bala") {
-            Destroy(this.gameObject);
+            golpes_restantes--;
+            if(golpes_restantes == 0) {
+                gameManagerController.matarZombie();
+                Destroy(this.gameObject);
+            }
         }
     }
 }
