@@ -8,6 +8,7 @@ TagManager:
   - Bala
   - Enemy
   - PBala
+  - Mapa
   layers:
   - Default
   - TransparentFX

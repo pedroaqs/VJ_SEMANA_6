@@ -41,12 +41,11 @@ public class NpcController : MonoBehaviour
     void Update()
     {
         if(live) {
-            rb.velocity = new Vector2(vStop,rb.velocity.y);
-            SetAnimacion(IDLE);
+            // rb.velocity = new Vector2(vStop,rb.velocity.y);
+            // SetAnimacion(IDLE);
 
             
             if(Input.GetKey(KeyCode.RightArrow)) {
-                Debug.Log("Correr derecha");
                 sr.flipX = false ;
                 rb.velocity = new Vector2(vRun,rb.velocity.y);
                 SetAnimacion(RUN);
@@ -101,6 +100,38 @@ public class NpcController : MonoBehaviour
 
     void ganarBalas() {
         balas = balas + 5;
+    }
+
+    public void saltar() {
+        rb.AddForce(new Vector2(0,jumForce),ForceMode2D.Impulse);
+        SetAnimacion(JUMP);
+        audioSource.PlayOneShot(saltosound);
+    }
+
+    public void moverDerecha() {
+        Debug.Log("Presionando derecha");
+        sr.flipX = false ;
+        SetAnimacion(RUN);
+        rb.velocity = new Vector2(vRun,rb.velocity.y);
+    }
+    public void moverIzquierda() {
+        Debug.Log("Presionando izquierda");
+        sr.flipX = true ;
+        SetAnimacion(RUN);
+        rb.velocity = new Vector2(-vRun,rb.velocity.y);
+    }
+    public void atacar() {
+        if(balas > 0) {
+            balas = balas-1;
+            crearBala(vRun);
+            gameManagerController.printBalas(balas);
+        }
+    }
+
+    public void detenerse() {
+        Debug.Log("Presionando izquierda");
+        rb.velocity = new Vector2(vStop,rb.velocity.y);
+        SetAnimacion(IDLE);
     }
     
 }
