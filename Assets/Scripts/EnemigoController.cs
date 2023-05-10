@@ -30,5 +30,9 @@ public class EnemigoController : MonoBehaviour
                 Destroy(this.gameObject);
             }
         }
+
+        if(other.gameObject.tag ==  "DeleteEnemy") {
+            Destroy(this.gameObject);
+        }
     }
 }

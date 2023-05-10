@@ -9,6 +9,8 @@ TagManager:
   - Enemy
   - PBala
   - Mapa
+  - DeleteEnemy
+  - Key
   layers:
   - Default
   - TransparentFX

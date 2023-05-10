@@ -109,13 +109,11 @@ public class NpcController : MonoBehaviour
     }
 
     public void moverDerecha() {
-        Debug.Log("Presionando derecha");
         sr.flipX = false ;
         SetAnimacion(RUN);
         rb.velocity = new Vector2(vRun,rb.velocity.y);
     }
     public void moverIzquierda() {
-        Debug.Log("Presionando izquierda");
         sr.flipX = true ;
         SetAnimacion(RUN);
         rb.velocity = new Vector2(-vRun,rb.velocity.y);
@@ -129,7 +127,6 @@ public class NpcController : MonoBehaviour
     }
 
     public void detenerse() {
-        Debug.Log("Presionando izquierda");
         rb.velocity = new Vector2(vStop,rb.velocity.y);
         SetAnimacion(IDLE);
     }
