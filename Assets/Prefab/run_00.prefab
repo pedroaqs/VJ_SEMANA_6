@@ -158,3 +158,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8430d3dc7bc3c7a4d9b6176e09dd2478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  golpes_restantes: 2
+  gameManagerController: {fileID: 0}

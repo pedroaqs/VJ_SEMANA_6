@@ -807,8 +807,17 @@ MonoBehaviour:
   textoBalas: {fileID: 1596219456874434666}
   textoZombie: {fileID: 1596219458472008316}
   textoKey: {fileID: 1596219458533148143}
+  playersobjects:
+  - {fileID: 2904848758566955255, guid: 968f3356fbab0f6429f2f275ce045cf9, type: 3}
+  - {fileID: 2904848758566955255, guid: 1d5166b178ee8804dbe3b0d516ce7541, type: 3}
+  - {fileID: 2904848758566955255, guid: 38c8d97ea2aefb9488d540614e98a2be, type: 3}
+  imageComponent: {fileID: 0}
+  players: []
+  currentplayer: 0
   contadorvida: 0
-  contadorZombie: 0
+  contadorZombie1: 0
+  contadorZombie2: 0
+  contadorZombie3: 0
   llave: 0
 --- !u!82 &1596219457513724216
 AudioSource:

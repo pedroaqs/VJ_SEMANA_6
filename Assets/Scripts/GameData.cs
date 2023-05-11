@@ -4,9 +4,10 @@ using System.Collections.Generic;
 public class GameData
 {
     public int vidas {get; set;}
-    public int balas {get; set;}
-    public int puntos {get; set;}
-    public int llaves {get; set;}
+    public int puntos1 {get; set;}
+    public int puntos2 {get; set;}
+    public int puntos3 {get; set;}
     public int personaje {get; set;}
+
 
 }
